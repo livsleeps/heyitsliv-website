@@ -14,14 +14,12 @@
 
 .terminal-text {
   color: white;
-  font-family: "Monocraft", monospace;
   font-size: 16px;
   text-align: left;
 }
 
 .terminal-input {
   color: white;
-  font-family: "Monocraft", monospace;
   font-size: 16px;
   text-align: left;
   border: none;
@@ -39,10 +37,33 @@ p {
   background: none;
   outline: none;
   color: white;
-  font-family: "Monocraft", monospace;
   font-size: 16px;
 }
 
 * {
   cursor: url('cursor/cursor.png'), auto;
+  font-family: monocraft;
+}
+
+@font-face {
+  font-family: monocraft;
+  src: url('fonts/Monocraft.otf');
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-width: 2px;
+  border-color: aqua;
+  border-style: solid;
+  border-radius: 10px 0 0 10px;
+  display: none;
 }
