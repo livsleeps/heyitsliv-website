@@ -9,4 +9,5 @@ The beginning of my personal website. For now I choose to host on nekoweb, but e
 - [ ] background sticker bomb while keeping transparency for transparent browsers
 - [ ] javascript command interation to open/output content
 - [ ] different pages for content
-- [ ] hidden side menu for help, music player, alternative navigation, and anything else
+- [x] hidden side menu for help, music player, alternative navigation, and anything else
+- [ ] decide on color pallete
