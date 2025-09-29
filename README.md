@@ -10,7 +10,7 @@ The beginning of my personal website. For now I choose to host on nekoweb, but e
 - [x] hidden side menu for help, music player, alternative navigation, and anything else
 - [x] ls/help command to list links
 - [x] different pages for content
-- [ ] help menu content
+- [x] help menu content
 - [ ] background sticker bomb while keeping transparency for transparent browsers
 - [ ] decide on color pallete
 - [ ] command output animation
@@ -18,3 +18,4 @@ The beginning of my personal website. For now I choose to host on nekoweb, but e
 - [ ] favicon
 - [ ] display command output
 - [ ] css overhaul to clean up
+- [ ] design nekobox using [this resource](https://jbc.lol/utils/nekobox/)
