@@ -2,6 +2,7 @@
 // tried to add comments for myself and to improve readability
 const commandInput = document.getElementById('commandInput');
 const displayArea = document.getElementById('terminalOutput');
+const helpArea = document.getElementById('helpOutput');
 
 // load external html into terminal div
 function inputHTML(divId,filePath) {
@@ -29,7 +30,10 @@ function inputHTML(divId,filePath) {
 }
 
 // test function call
-inputHTML('terminalOutput', 'test.html');
+// inputHTML('terminalOutput', 'test.html');
+
+// first call to display home page
+inputHTML('terminalOutput', 'home.html');
 
 // event listener for command input
 commandInput.addEventListener('keyup', (event) => {
@@ -37,16 +41,22 @@ commandInput.addEventListener('keyup', (event) => {
     const command = commandInput.value.trim().toLowerCase(); // makes commant lower case and removes whitespace for better processing
 
     // list of commands w/ actions
-    if (command === 'help') {
-      displayArea.textContent = 'todo: list of commands';
+    if (command === 'test') {
+      inputHTML('terminalOutput', 'test.html');
+      commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
+    } else if (command === 'help' || command === 'ls') {
+      inputHTML('helpOutput', 'help.html');
       commandInput.value = ''; // clear input field
     } else if (command.startsWith('echo ')) {
       const message = commandInput.value.substring(5); // get text after 'echo '
       displayArea.textContent += `echo: ${message}\n`; // display message
       commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
     } else {
       displayArea.textContent = `Unknown command: ${command}`;
       commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
     }
   }
 });

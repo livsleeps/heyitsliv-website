@@ -10,19 +10,20 @@
 <body>
 
     <div class="terminal">
-        <div class="terminal-text">
-            <p>Welcome to my website!</p>
-        </div>
+        <!-- terminal output area -->
+        <div class="terminal-text" id="terminalOutput"></div>
 
-        <div class="terminal-output" id="terminalOutput">
-        </div>
+        <!-- help output area -->
+        <div class="terminal-text" id="helpOutput"></div>
 
+        <!-- terminal input area -->
         <div class="terminal-input">
             <span class="prompt">~ > </span>
             <input class="terminal-input-field" type="text" id="commandInput" placeholder="Type a command..." autofocus>
         </div>
     </div>
     
+    <!-- sidebar toggle and sidebar content -->
     <div class="sidebar-toggle">
         <label for="toggle">help menu</label>
         <input type="checkbox" id="toggle" class="hidden">
@@ -42,12 +43,9 @@
             </div>
         </div>
     </div>
+
     <!-- default nekoweb stuff
     <div>
-        <p>
-            This is <b>your</b> page! Fill it up with your content!!!!
-        </p>
-        <p>
             Helpful resources:
             <ul>
                 <li><a href="https://www.w3schools.com/html/">HTML tutorial (W3Schools)</a></li>
@@ -56,10 +54,11 @@
                 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web by Mozilla</a></li>
                 <li>Press F12 (or right-click and select "Inspect" in most browsers) to open the developer tools and see the page source. This is a great way to look how other pages are made. It's also <i>very</i> useful while creating your own page.</li>
             </ul>
-        </p>
         <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button5.gif"></a>
     </div>
     -->
+
+    <!-- link to external JS file -->
     <script src="scripts.js"></script>
 </body>
 </html>
