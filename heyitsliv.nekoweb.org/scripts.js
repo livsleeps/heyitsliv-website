@@ -42,6 +42,7 @@ commandInput.addEventListener('keyup', (event) => {
     const command = commandInput.value.trim().toLowerCase(); // makes commant lower case and removes whitespace for better processing
 
     // list of commands w/ actions
+    // must add new commands when adding new pages
     if (command === 'test') {
       inputHTML('terminalOutput', 'test.html');
       commandInput.value = ''; // clear input field
@@ -49,6 +50,22 @@ commandInput.addEventListener('keyup', (event) => {
     } else if (command === 'help' || command === 'ls') {
       inputHTML('helpOutput', 'help.html');
       commandInput.value = ''; // clear input field
+    } else if (command === 'home') {
+      inputHTML('terminalOutput', 'home.html');
+      commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
+    } else if (command === 'about') {
+      inputHTML('terminalOutput', 'about.html');
+      commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
+    } else if (command === 'blog') {
+      inputHTML('terminalOutput', 'blog.html');
+      commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
+    } else if (command === 'guestbook') {
+      inputHTML('terminalOutput', 'guestbook.html');
+      commandInput.value = ''; // clear input field
+      helpArea.innerHTML = ''; // clear help area
     } else if (command.startsWith('echo ')) {
       const message = commandInput.value.substring(5); // get text after 'echo '
       displayArea.textContent += `echo: ${message}\n`; // display message
