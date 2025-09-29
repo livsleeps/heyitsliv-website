@@ -3,6 +3,7 @@
 const commandInput = document.getElementById('commandInput');
 const displayArea = document.getElementById('terminalOutput');
 const helpArea = document.getElementById('helpOutput');
+const helpButton = document.getElementById('helpButton');
 
 // load external html into terminal div
 function inputHTML(divId,filePath) {
