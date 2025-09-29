@@ -1,10 +1,11 @@
 // learning javascript as i go so may be bad code (；′⌒`)
+// tried to add comments for myself and to improve readability
 const commandInput = document.getElementById('commandInput');
 const displayArea = document.getElementById('terminalOutput');
 
 // load external html into terminal div
 function inputHTML(divId,filePath) {
-  fetch(filePath) // load file from specified path
+  fetch(`commands/${filePath}`) // load file from specified path
 
   .then(response => { // verify file was found and loaded
     if (!response.ok) {
@@ -32,7 +33,7 @@ inputHTML('terminalOutput', 'test.html');
 
 // event listener for command input
 commandInput.addEventListener('keyup', (event) => {
-  if (event.key === 'Enter') { // hitting enter processes request
+  if (event.key === `Enter`) { // hitting enter processes request
     const command = commandInput.value.trim().toLowerCase(); // makes commant lower case and removes whitespace for better processing
 
     // list of commands w/ actions
@@ -40,7 +41,7 @@ commandInput.addEventListener('keyup', (event) => {
       displayArea.textContent = 'todo: list of commands';
       commandInput.value = ''; // clear input field
     } else if (command.startsWith('echo ')) {
-      const message = commandInput.substring(5); // get text after 'echo '
+      const message = commandInput.value.substring(5); // get text after 'echo '
       displayArea.textContent += `echo: ${message}\n`; // display message
       commandInput.value = ''; // clear input field
     } else {
