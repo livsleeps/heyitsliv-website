@@ -29,14 +29,30 @@
         <input type="checkbox" id="toggle" class="hidden">
 
         <div class="sidebar">
-            <div class="command-list">
-                <p>list of commands</p>
-                <p>coming soon...</p>
-            </div>
-            <br>
-            <div class="nav-links">
-                <p>nav links for da lazy</p>
-            </div>
+            <!-- available commands -->
+            <div>
+                <p>available commands:</p>
+                <ul>
+                    <li>
+                        <button class="command-button" onclick="inputHTML('terminalOutput', 'home.html')">home</button>
+                    </li>
+                    <li>
+                        <button class="command-button" onclick="inputHTML('terminalOutput', 'fastfetch.html')">fastfetch/about</button>
+                    </li>
+                    <li>
+                        <button class="command-button" onclick="inputHTML('terminalOutput', 'blog.html')">blog</button>
+                    </li>
+                    <li>
+                        <button class="command-button" onclick="inputHTML('terminalOutput', 'guestbook.html')">guestbook</button>
+                    </li>
+                    <li>
+                        echo [message]
+                    </li>
+                    <li>
+                        <button class="command-button" onclick="inputHTML('terminalOutput', 'ls.html')">ls/help</button>
+                    </li>
+                </ul>
+                </div>
             <br>
             <div class="music-player">
                 <p>music player coming soon...</p>
